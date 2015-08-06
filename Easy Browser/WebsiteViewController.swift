@@ -69,6 +69,7 @@ class WebsiteViewController: UIViewController, WKNavigationDelegate {
     // MARK: - Local methods
     
     func returnToTableView() {
+        self.webView.removeObserver(self, forKeyPath: "estimatedProgress")
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
